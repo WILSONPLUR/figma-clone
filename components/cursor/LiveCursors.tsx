@@ -1,9 +1,9 @@
-import { LiveCursorProps } from "@/types/type";
+import { CursorState, LiveCursorProps } from "@/types/type";
 import { Cursor } from "./Cursor";
 import { COLORS } from "@/constants";
 
 export const LiveCursors = ({ others }: LiveCursorProps) => {
-  return others.map(({ connectionId, presence }) => {
+  return others.map(({ connectionId, presence }: any) => {
     if (!presence?.cursor) return null;
     return (
       <Cursor

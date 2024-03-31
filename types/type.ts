@@ -1,3 +1,4 @@
+import { Presence } from "@/liveblocks.config";
 import { BaseUserMeta, User } from "@liveblocks/client";
 import { Gradient, Pattern } from "fabric/fabric-impl";
 
@@ -30,6 +31,10 @@ export type Reaction = {
   value: string;
   timestamp: number;
   point: { x: number; y: number };
+};
+
+export type LiveCursorProps = {
+  others: readonly User<Presence, BaseUserMeta>[];
 };
 
 export type ReactionEvent = {

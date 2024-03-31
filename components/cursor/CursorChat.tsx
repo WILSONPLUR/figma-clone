@@ -1,5 +1,6 @@
 import CursorSVG from "@/public/assets/CursorSVG";
 import { CursorChatProps, CursorMode, CursorState } from "@/types/type";
+import { nextImageLoaderRegex } from "next/dist/build/webpack-config";
 import React from "react";
 
 export const CursorChat = ({
@@ -20,7 +21,8 @@ export const CursorChat = ({
     if (e.key === "Enter") {
       setCursorState({
         mode: CursorMode.Chat,
-        previousMessage: cursorState.message,
+        previousMessage:
+          cursorState.mode === CursorMode.Chat ? cursorState.message : null,
         message: "",
       });
     } else if (e.key === "Espace") {
