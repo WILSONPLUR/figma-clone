@@ -19,7 +19,4 @@ const Avatar = ({ name }: { name: string }) => {
   );
 };
 
-export default memo(
-  Avatar,
-  (prevProps, nextProps) => prevProps.activeElement === nextProps.activeElement
-);
+export default memo(Avatar);

@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { ActiveUsers } from "../users/ActiveUsers";
+import ActiveUsers from "../users/ActiveUsers";
 import { navElements } from "@/constants";
 import { ActiveElement, NavbarProps } from "@/types/type";
 import ShapesMenu from "../ShapesMenu";
